@@ -7,7 +7,7 @@ $mysql = new mysqli(
     3306
 );
 
-$rs = $mysql -> query("SELECT * FROM usuario");
+$rs = $mysql -> query("SELECT * FROM cliente");
 
 ?>
 <html>
@@ -33,3 +33,4 @@ $rs = $mysql -> query("SELECT * FROM usuario");
     </body>
 
 </html>
+
