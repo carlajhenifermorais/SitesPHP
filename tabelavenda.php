@@ -14,7 +14,7 @@ $rs = $mysql -> query("SELECT * FROM venda");
     <head>
     </head>
     <body>
-        <h1>Lista de usuario</h1>
+        <h1>Lista de vendas</h1>
         <table>
             <tr>
                 <th>Código</th>
@@ -33,4 +33,5 @@ $rs = $mysql -> query("SELECT * FROM venda");
             <?php endforeach ?>
         </table>
     </body>
+
 </html>
