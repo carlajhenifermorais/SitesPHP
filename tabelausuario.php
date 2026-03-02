@@ -20,6 +20,9 @@ $rs = $mysql -> query("SELECT * FROM usuario");
                 <th>Código</th>
                 <th>Nome</th>
                 <th>Email</th>
+                <th>Senha</th>
+                <th>Ativo</th>
+                <th>Tipo</th>
             </tr>
 
             <?php foreach($rs as $ln): ?>
@@ -27,6 +30,9 @@ $rs = $mysql -> query("SELECT * FROM usuario");
                     <td><?=$ln["id"]?></td>
                     <td><?=$ln["nome"]?></td>
                     <td><?=$ln["email"]?></td>
+                    <td><?=$ln["senha"]?></td>
+                    <td><?=$ln["ativo"]?></td>
+                    <td><?=$ln["tipo"]?></td>
             </tr>
             <?php endforeach ?>
         </table>
