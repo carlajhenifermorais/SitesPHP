@@ -14,7 +14,7 @@ $rs = $mysql -> query("SELECT * FROM usuario");
     <head>
     </head>
     <body>
-        <h1>Lista de usuario</h1>
+        <h1>Lista de cliente</h1>
         <table>
             <tr>
                 <th>Código</th>
@@ -31,4 +31,5 @@ $rs = $mysql -> query("SELECT * FROM usuario");
             <?php endforeach ?>
         </table>
     </body>
+
 </html>
