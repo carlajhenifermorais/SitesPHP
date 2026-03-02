@@ -19,14 +19,22 @@ $rs = $mysql -> query("SELECT * FROM produto");
             <tr>
                 <th>Código</th>
                 <th>Nome</th>
-                <th>Email</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+                <th>ID Categoria</th>
+                <th>Ativo</th>
             </tr>
 
             <?php foreach($rs as $ln): ?>
                 <tr>
                     <td><?=$ln["id"]?></td>
                     <td><?=$ln["nome"]?></td>
-                    <td><?=$ln["email"]?></td>
+                    <td><?=$ln["descricao"]?></td>
+                    <td><?=$ln["preco"]?></td>
+                    <td><?=$ln["estoque"]?></td>
+                    <td><?=$ln["categoria_id"]?></td>
+                    <td><?=$ln["ativo"]?></td>
             </tr>
             <?php endforeach ?>
         </table>
