@@ -1,4 +1,4 @@
-<?php
+?php
 $mysql = new mysqli(
     "localhost",
     "root",
@@ -19,18 +19,27 @@ $rs = $mysql -> query("SELECT * FROM cliente");
             <tr>
                 <th>Código</th>
                 <th>Nome</th>
+                <th>Cpf</th>
                 <th>Email</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>CEP</th>
+                <th>Data Cadastro</th>
             </tr>
 
             <?php foreach($rs as $ln): ?>
                 <tr>
                     <td><?=$ln["id"]?></td>
                     <td><?=$ln["nome"]?></td>
+                    <td><?=$ln["cpf"]?></td>
                     <td><?=$ln["email"]?></td>
+                    <td><?=$ln["telefone"]?></td>
+                    <td><?=$ln["endereco"]?></td>
+                    <td><?=$ln["cep"]?></td>
+                    <td><?=$ln["data_cadastro"]?></td>
             </tr>
             <?php endforeach ?>
         </table>
     </body>
 
 </html>
-
