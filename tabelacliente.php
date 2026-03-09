@@ -1,4 +1,4 @@
-?php
+<?php
 $mysql = new mysqli(
     "localhost",
     "root",
@@ -14,6 +14,28 @@ $rs = $mysql -> query("SELECT * FROM cliente");
     <head>
     </head>
     <body>
+        <table>
+            <tr>
+                <td>
+                    <a href="index.php">Home</a>
+                </td>
+                <td>
+                    <a href="artigos.html">Tabela usuário</a>
+                </td>
+                <td>
+                    <a href="categorias.html">Tabela categoria</a>
+                </td>
+                <td>
+                    <a href="sobre.html">Tabela venda</a>
+                </td>
+                <td>
+                    <a href="sobre.html">Tabela produto</a>
+                </td>
+                <td>
+                    <a href="sobre.html">Tabela cliente</a>
+                </td>
+            </tr>
+        </table>
         <h1>Lista de cliente</h1>
         <table>
             <tr>
