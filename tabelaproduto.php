@@ -20,24 +20,27 @@ $rs = $mysql -> query("SELECT * FROM produto");
                     <a href="index.php">Home</a>
                 </td>
                 <td>
-                    <a href="artigos.html">Tabela usuário</a>
+                    <a href="tabelausuario.php">Tabela usuário</a>
                 </td>
                 <td>
-                    <a href="categorias.html">Tabela categoria</a>
+                    <a href="tabelacategoria.php">Tabela categoria</a>
                 </td>
                 <td>
-                    <a href="sobre.html">Tabela venda</a>
+                    <a href="tabelavenda.php">Tabela venda</a>
                 </td>
                 <td>
-                    <a href="sobre.html">Tabela produto</a>
+                    <a href="tabelaproduto.php">Tabela produto</a>
                 </td>
                 <td>
-                    <a href="sobre.html">Tabela cliente</a>
+                    <a href="tabelacliente.php">Tabela cliente</a>
+                </td>
+                <td>
+                    <a href="relatorio.php">Relatório</a>
                 </td>
             </tr>
         </table>
         <h1>Lista de produto</h1>
-        <table>
+        <table border=1>
             <tr>
                 <th>Código</th>
                 <th>Nome</th>

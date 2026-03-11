@@ -1,3 +1,16 @@
+<?php
+$mysql = new mysqli(
+    "localhost",
+    "root",
+    "",
+    "loja_web3",
+    3306
+);
+
+$data = $mysql -> query("SELECT * FROM venda");
+
+?>
+
 <html>
     <head>
     </head>
@@ -21,6 +34,9 @@
                 </td>
                 <td>
                     <a href="tabelacliente.php">Tabela cliente</a>
+                </td>
+                <td>
+                    <a href="relatorio.php">Relatório</a>
                 </td>
             </tr>
         </table>

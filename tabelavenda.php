@@ -7,7 +7,8 @@ $mysql = new mysqli(
     3306
 );
 
-$rs = $mysql -> query("SELECT * FROM venda");
+$rs = $mysql -> query("SELECT * FROM venda, item_venda");
+
 
 ?>
 <html>
@@ -20,29 +21,33 @@ $rs = $mysql -> query("SELECT * FROM venda");
                     <a href="index.php">Home</a>
                 </td>
                 <td>
-                    <a href="artigos.html">Tabela usuário</a>
+                    <a href="tabelausuario.php">Tabela usuário</a>
                 </td>
                 <td>
-                    <a href="categorias.html">Tabela categoria</a>
+                    <a href="tabelacategoria.php">Tabela categoria</a>
                 </td>
                 <td>
-                    <a href="sobre.html">Tabela venda</a>
+                    <a href="tabelavenda.php">Tabela venda</a>
                 </td>
                 <td>
-                    <a href="sobre.html">Tabela produto</a>
+                    <a href="tabelaproduto.php">Tabela produto</a>
                 </td>
                 <td>
-                    <a href="sobre.html">Tabela cliente</a>
+                    <a href="tabelacliente.php">Tabela cliente</a>
+                </td>
+                <td>
+                    <a href="relatorio.php">Relatório</a>
                 </td>
             </tr>
         </table>
         <h1>Lista de vendas</h1>
-        <table>
+        <table border=1>
             <tr>
                 <th>Código</th>
                 <th>ID cliente</th>
                 <th>ID usuário</th>
                 <th>Data venda</th>
+                <th>Valor total</th>
             </tr>
 
             <?php foreach($rs as $ln): ?>
@@ -51,7 +56,8 @@ $rs = $mysql -> query("SELECT * FROM venda");
                     <td><?=$ln["cliente_id"]?></td>
                     <td><?=$ln["usuario_id"]?></td>
                     <td><?=$ln["data_venda"]?></td>
-            </tr>
+                    <td><?=$ln["preco_unitario"]?></td>
+                </tr>
             <?php endforeach ?>
         </table>
     </body>
