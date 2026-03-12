@@ -7,7 +7,8 @@ $mysql = new mysqli(
     3306
 );
 
-$data = $mysql -> query("SELECT * FROM venda");
+$data = $mysql -> query("SELECT id, nome, descricao FROM categoria; SELECT id, categoria_id, produto_id FROM categoria_produto;
+                        SELECT id, nome, cpf, email, telefone, endereco, cep, data_cadastro FROM cliente");
 
 ?>
 
