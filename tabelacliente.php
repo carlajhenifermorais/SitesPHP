@@ -14,33 +14,25 @@ $rs = $mysql -> query("SELECT * FROM cliente");
 ?>
 <html>
     <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="estilo.css">
     </head>
     <body>
-        <table>
-            <tr>
-                <td>
-                    <a href="index.php">Home</a>
-                </td>
-                <td>
-                    <a href="tabelausuario.php">Tabela usuário</a>
-                </td>
-                <td>
-                    <a href="tabelacategoria.php">Tabela categoria</a>
-                </td>
-                <td>
-                    <a href="tabelavenda.php">Tabela venda</a>
-                </td>
-                <td>
-                    <a href="tabelaproduto.php">Tabela produto</a>
-                </td>
-                <td>
-                    <a href="tabelacliente.php">Tabela cliente</a>
-                </td>
-                <td>
-                    <a href="relatorio.php">Relatório</a>
-                </td>
-            </tr>
-        </table>
+        <nav class="navbar navbar-expand-lg navbar-light bg-pink">
+        <a class="navbar-brand" href="index.php">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-item nav-link" href="tabelacategoria.php">Tabela categoria</a>
+            <a class="nav-item nav-link" href="tabelavenda.php">Tabela venda</a>
+            <a class="nav-item nav-link" href="tabelaproduto.php">Tabela produto</a>
+            <a class="nav-item nav-link" href="tabelacliente.php">Tabela cliente</a>
+            <a class="nav-item nav-link" href="relatorio.php">Relatório</a>
+            </div>
+        </div>
+        </nav>
         <h1>Lista de cliente</h1>
         <table border=1>
             <tr>
