@@ -9,8 +9,6 @@ $mysql = new mysqli(
 
 $rs = $mysql -> query("SELECT * FROM venda");
 
-$data = $mysql -> query("SELECT data_venda FROM venda");
-
 ?>
 
 <html>
@@ -44,14 +42,14 @@ $data = $mysql -> query("SELECT data_venda FROM venda");
             </tr>
          
         <?php foreach($rs as $ln): ?>
-                <?php if(date("m", $rs(data_venda))==date("m")&&date("Y", $rs(data_venda))==date("Y")): ?>
+            <?php if(date("m", strtotime($ln["data_venda"])) == date("m") && date("Y", strtotime($ln["data_venda"])) == date("Y")): ?>
                 <tr>
                     <td><?=$ln["id"]?></td>
                     <td><?=$ln["cliente_id"]?></td>
                     <td><?=$ln["usuario_id"]?></td>
                     <td><?=$ln["data_venda"]?></td>
                 </tr>
-                <?php endif ?>
+            <?php endif ?>
         <?php endforeach ?>
         </table>
     </body>
