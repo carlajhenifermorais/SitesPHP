@@ -1,3 +1,4 @@
+//testes do código
 <?php foreach(if (date("m",$data)==date("m")&&date("Y",$data)==date("Y"))): ?>
                 <tr>
                     <td><?=$ln["id"]?></td>
