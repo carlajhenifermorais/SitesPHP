@@ -3,7 +3,7 @@ $mysql = new mysqli(
     "localhost",
     "root",
     "",
-    "loja_web3",
+    "mystore",
     3306
 );
 

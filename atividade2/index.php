@@ -16,6 +16,7 @@
             <a class="nav-item nav-link" href="tabelaproduto.php">Tabela produto</a>
             <a class="nav-item nav-link" href="tabelacliente.php">Tabela cliente</a>
             <a class="nav-item nav-link" href="relatorio.php">Relatório</a>
+            <a class="nav-item nav-link" href="cadastroproduto.php">Cadastro produto</a>
             </div>
         </div>
         </nav>
@@ -37,8 +38,8 @@
                     <a href="tabelacliente.php">
                         <button type="button" class="btn btn-warning">Tabela cliente</button>
                     </a>
-                    <a href="relatorio.php">
-                        <button type="button" class="btn btn-warning">Relatório</button>
+                    <a href="cadastrarproduto.php">
+                        <button type="button" class="btn btn-warning">Cadastro produtos</button>
                     </a>
             </div>
     </body>

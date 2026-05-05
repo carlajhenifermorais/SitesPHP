@@ -3,11 +3,24 @@ $mysql = new mysqli(
     "localhost",
     "root",
     "",
-    "loja_web3",
+    "mystore",
     3306
 );
 
-$rs = $mysql -> query("SELECT * FROM categoria");
+$id = $_GET["id"];
+
+$rs = $mysql->query("SELECT * FROM categoria WHERE id = $id AND ativo=1");
+
+if($rs->num_rows == 0) {
+    $err = "Registro não existe";
+}else{
+    
+    try {
+        $mysql->query("DELETE FROM categoria WHERE id=$id");
+    } catch(Exception $e) {
+        $mysql->query("UPDATE categoria SET ativo=0 WHERE id=$id");
+    }
+}
 
 ?>
 <html>
