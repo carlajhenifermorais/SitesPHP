@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(255, 162, 181);
+}
+nav{
+    background-color: rgb(226, 64, 96);
+}
+table{
+    background-color: rgb(255, 162, 181);
+    color: rgb(255, 162, 181);
+}
+.btn{
+    background-color: crimson;
+}
