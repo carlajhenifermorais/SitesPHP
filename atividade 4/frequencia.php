@@ -40,8 +40,8 @@ if (sizeof($_GET) > 0){
         <div class="container">
             <table class="table">
                 <tr>
-                    <td><h1>Frequência</h1></td>
-                    <td><a href="index.php" class="btn">Voltar</a></td>
+                    <tr><h1>Frequência</h1></tr>
+                    <tr><a href="addfrequencia.php" class="btn">Adicionar nova frequência</a></tr>
                 </tr>
             </table>
             
@@ -61,13 +61,13 @@ if (sizeof($_GET) > 0){
                         <td><?php if($ln["Presenca"]==false){echo "Faltou";}else{echo "Presente";}?></td>
                         <td>
                             <a href="detalharfrequencia.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
-                            <a href="addfrequencia.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
                             <a href="atualizarfrequencia.php?pos=<?php echo $ln["ID"];?>&&matri=<?php echo $ln["Matricula"];?>&&dataaula=<?php echo $ln["DataAula"];?>&&pres=<?php echo $ln["Presenca"];?>" class="btn">Editar</a>
                             <a href="frequencia.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>
                     </tr>
                 <?php endforeach ?>
             </table>
+            <a href="index.php" class="btn">Voltar</a>
         </div>
     </body>
 </html>

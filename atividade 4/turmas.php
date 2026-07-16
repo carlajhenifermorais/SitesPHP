@@ -45,8 +45,8 @@ if (sizeof($_GET) > 0){
         <div class="container">
             <table class="table">
                 <tr>
-                    <td><h1>Turmas</h1></td>
-                    <td><a href="index.php" class="btn">Voltar</a></td>
+                    <tr><h1>Turmas</h1></tr>
+                    <tr><a href="addturmas.php" class="btn">Adicionar nova turma</a></tr>
                 </tr>
             </table>
             
@@ -68,13 +68,13 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["Professor"];?></td>
                         <td>
                             <a href="detalharturmas.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
-                            <a href="addturmas.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
                             <a href="atualizarturmas.php?pos=<?php echo $ln["ID"];?>&&ano=<?php echo $ln["Ano"];?>&&sem=<?php echo $ln["Semestre"];?>&&disc=<?php echo $ln["Disciplina"];?>&&prof=<?php echo $ln["Professor"];?>" class="btn">Editar</a>
                             <a href="turmas.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>
                     </tr>
                 <?php endforeach ?>
             </table>
+            <a href="index.php" class="btn">Voltar</a>
         </div>
     </body>
 </html>
