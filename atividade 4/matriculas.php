@@ -54,11 +54,11 @@ if (sizeof($_GET) > 0){
             <table class="table">
                 <tr>
                     <td><h1>Matrículas</h1></td>
-                    <td><a href="deletar.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="index.php" class="btn">Voltar</a></td>
                 </tr>
             </table>
             
-            <table class="table table-dark table-striped">
+            <table class="table">
                 <tr>
                     <th>ID</th>
                     <th>Aluno</th>
@@ -75,8 +75,10 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["DataMat"];?></td>
                         <td><?php echo $ln["Status"];?></td>
                         <td>
-                            <a href="matriculas.php?pos=<?php echo $ln["ID"];?>" class="btn btn-danger">Deletar</a>
-                            <a href="atualizarmatriculas.php?pos=<?php echo $ln["ID"];?>&&aluno=<?php echo $ln["Aluno"];?>&&turma=<?php echo $ln["Turma"];?>&&datamat=<?php echo $ln["DataMat"];?>&&status=<?php echo $ln["Status"];?>" class="btn btn-light">Editar</a>
+                            <a href="detalharmatriculas.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="addmatriculas.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
+                            <a href="atualizarmatriculas.php?pos=<?php echo $ln["ID"];?>&&aluno=<?php echo $ln["Aluno"];?>&&turma=<?php echo $ln["Turma"];?>&&datamat=<?php echo $ln["DataMat"];?>&&status=<?php echo $ln["Status"];?>" class="btn">Editar</a>
+                            <a href="matriculas.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>
                     </tr>
                 <?php endforeach ?>

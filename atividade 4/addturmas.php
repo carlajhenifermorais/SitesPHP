@@ -43,11 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <table class="table">
                 <tr>
                     <td><h1>Turmas</h1></td>
-                    <td><a href="add.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="turmas.php" class="btn">Voltar</a></td>
                 </tr>
             </table>
             
-            <table class="table table-dark table-striped">
+            <table class="table">
                 <tr>
                     <th>ID</th>
                     <th>Ano Letivo</th>
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </select></td>
                     </tr>
                     </table>
-                    <button type="submit" class="btn btn-dark">Adicionar</button>
+                    <button type="submit" class="btn">Adicionar</button>
                 </form>
         </div>
     </body>

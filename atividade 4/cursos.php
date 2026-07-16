@@ -37,7 +37,7 @@ if (sizeof($_GET) > 0){
             </p>
         <?php endif;?>
         <nav class="navbar navbar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -46,12 +46,12 @@ if (sizeof($_GET) > 0){
             <table class="table">
                 <tr>
                     <td><h1>Cursos</h1></td>
-                    <td><a href="deletar.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="index.php" class="btn">Voltar</a></td>
                 </tr>
             </table>
             
             
-            <table class="table table-dark table-striped">
+            <table class="table">
                 <tr>
                     <th>ID</th>
                     <th>Curso</th>
@@ -63,8 +63,11 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["ID"];?></td>
                         <td><?php echo $ln["Curso"];?></td>
                         <td><?php echo $ln["Duracao"];?> Semestres</td>
-                        <td><a href="cursos.php?pos=<?php echo $ln["ID"];?>" class="btn btn-danger">Deletar</a>
-                            <a href="atualizarcursos.php?pos=<?php echo $ln["ID"];?>&&curso=<?php echo $ln["Curso"];?>&&dura=<?php echo $ln["Duracao"];?>" class="btn btn-light">Editar</a>
+                        <td>
+                            <a href="detalharcursos.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="addcursos.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
+                            <a href="atualizarcursos.php?pos=<?php echo $ln["ID"];?>&&curso=<?php echo $ln["Curso"];?>&&dura=<?php echo $ln["Duracao"];?>" class="btn">Editar</a>
+                            <a href="cursos.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>
                         
                     </tr>

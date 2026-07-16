@@ -37,7 +37,7 @@ if (sizeof($_GET) > 0){
             </p>
         <?php endif;?>
         <nav class="navbar navbar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -46,11 +46,11 @@ if (sizeof($_GET) > 0){
             <table class="table">
                 <tr>
                     <td><h1>Avaliações</h1></td>
-                    <td><a href="deletar.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="index.php" class="btn">Voltar</a></td>
                 </tr>
             </table>
             
-            <table class="table table-dark table-striped">
+            <table class="table">
                 <tr>
                     <th>ID</th>
                     <th>Turma</th>
@@ -65,8 +65,10 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["Descricao"];?></td>
                         <td><?php echo $ln["Peso"];?></td>
                         <td>
-                            <a href="avaliacoes.php?pos=<?php echo $ln["ID"];?>" class="btn btn-danger">Deletar</a>
-                            <a href="atualizaravaliacoes.php?pos=<?php echo $ln["ID"];?>&&turma=<?php echo $ln["Turma"];?>&&desc=<?php echo $ln["Descricao"];?>&&peso=<?php echo $ln["Peso"];?>" class="btn btn-light">Editar</a>
+                            <a href="detalharavaliacoes.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="addavaliacoes.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
+                            <a href="atualizaravaliacoes.php?pos=<?php echo $ln["ID"];?>&&turma=<?php echo $ln["Turma"];?>&&desc=<?php echo $ln["Descricao"];?>&&peso=<?php echo $ln["Peso"];?>" class="btn">Editar</a>
+                            <a href="avaliacoes.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>
                     </tr>
                 <?php endforeach ?>

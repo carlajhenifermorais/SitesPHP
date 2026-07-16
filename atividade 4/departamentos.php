@@ -46,12 +46,12 @@ if (sizeof($_GET) > 0){
             <table class="table">
                 <tr>
                     <td><h1>Departamentos</h1></td>
-                    <td><a href="deletar.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="index.php" class="btn">Voltar</a></td>
                 </tr>
             </table>
             
             
-            <table class="table table-dark table-striped">
+            <table class="table">
                 <tr>
                     <th>ID</th>
                     <th>Departamentos</th>
@@ -63,6 +63,7 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["Departamentos"];?></td>
                         <td>
                             <a href="detalhardepartamento.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="adddepartamento.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
                             <a href="atualizardep.php?pos=<?php echo $ln["ID"];?>&&derp=<?php echo $ln["Departamentos"];?>" class="btn">Editar</a>
                             <a href="departamentos.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>

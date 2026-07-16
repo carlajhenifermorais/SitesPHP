@@ -37,7 +37,7 @@ if (sizeof($_GET) > 0){
             </p>
         <?php endif;?>
         <nav class="navbar navbar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -46,11 +46,11 @@ if (sizeof($_GET) > 0){
             <table class="table">
                 <tr>
                     <td><h1>Alunos</h1></td>
-                    <td><a href="deletar.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="index.php" class="btn">Voltar</a></td>
                 </tr>
             </table>
             
-            <table class="table table-dark table-striped">
+            <table class="table">
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
@@ -67,8 +67,10 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["DataNasc"];?></td>
                         <td><?php echo $ln["Curso"];?></td>
                         <td>
-                            <a href="alunos.php?pos=<?php echo $ln["ID"];?>" class="btn btn-danger">Deletar</a>
-                            <a href="atualizaralunos.php?pos=<?php echo $ln["ID"];?>&&nome=<?php echo $ln["Nome"];?>&&ra=<?php echo $ln["RA"];?>&&datanasc=<?php echo $ln["DataNasc"];?>&&curso=<?php echo $ln["Curso"];?>" class="btn btn-light">Editar</a>
+                            <a href="detalharalunos.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="addalunos.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
+                            <a href="atualizaralunos.php?pos=<?php echo $ln["ID"];?>&&nome=<?php echo $ln["Nome"];?>&&ra=<?php echo $ln["RA"];?>&&datanasc=<?php echo $ln["DataNasc"];?>&&curso=<?php echo $ln["Curso"];?>" class="btn">Editar</a>
+                            <a href="alunos.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>
                     </tr>
                 <?php endforeach ?>

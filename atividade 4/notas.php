@@ -27,7 +27,7 @@ if (sizeof($_GET) > 0){
     </head>
     <body>
         <nav class="navbar navbar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -36,7 +36,7 @@ if (sizeof($_GET) > 0){
             <h1>Notas</h1>
             
             
-            <table class="table table-dark table-striped">
+            <table class="table">
                 <tr>
                     <th>ID</th>
                     <th>Matrícula</th>
@@ -51,15 +51,17 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["Avaliacao"];?></td>
                         <td><?php echo $ln["Valor"];?></td>
                         <td>
-                            <a href="notas.php?pos=<?php echo $ln["ID"];?>" class="btn btn-danger">Deletar</a>
-                            <a href="atualizarnotas.php?pos=<?php echo $ln["ID"];?>&&matri=<?php echo $ln["Matricula"];?>&&ava=<?php echo $ln["Avaliacao"];?>&&valor=<?php echo $ln["Valor"];?>" class="btn btn-light">Editar</a>
+                            <a href="detalharnotas.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="addnotas.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
+                            <a href="atualizarnotas.php?pos=<?php echo $ln["ID"];?>&&matri=<?php echo $ln["Matricula"];?>&&ava=<?php echo $ln["Avaliacao"];?>&&valor=<?php echo $ln["Valor"];?>" class="btn">Editar</a>
+                            <a href="notas.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>
                     </tr>
                 <?php endforeach ?>
             </table>
             <table class="table">
                 <tr>
-                    <td><a href="deletar.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="index.php" class="btn">Voltar</a></td>
                 </tr>
             </table>
         </div>

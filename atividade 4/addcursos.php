@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </head>
     <body>
         <nav class="navbar navbar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -39,12 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <table class="table">
                 <tr>
                     <td><h1>Cursos</h1></td>
-                    <td><a href="add.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="cursos.php" class="btn">Voltar</a></td>
                 </tr>
             </table>
             
             
-            <table class="table table-dark table-striped">
+            <table class="table">
                 <tr>
                     <th>ID</th>
                     <th>Curso</th>
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <td><input type="number" name="duracao" style="width:100%"></td>
                     </tr>
                     </table>
-                    <button type="submit" class="btn btn-dark">Adicionar</button>
+                    <button type="submit" class="btn">Adicionar</button>
                 </form>
         </div>
     </body>

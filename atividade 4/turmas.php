@@ -37,7 +37,7 @@ if (sizeof($_GET) > 0){
             </p>
         <?php endif;?>
         <nav class="navbar navbar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -46,11 +46,11 @@ if (sizeof($_GET) > 0){
             <table class="table">
                 <tr>
                     <td><h1>Turmas</h1></td>
-                    <td><a href="deletar.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="index.php" class="btn">Voltar</a></td>
                 </tr>
             </table>
             
-            <table class="table table-dark table-striped">
+            <table class="table">
                 <tr>
                     <th>ID</th>
                     <th>Ano Letivo</th>
@@ -67,8 +67,10 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["Disciplina"];?></td>
                         <td><?php echo $ln["Professor"];?></td>
                         <td>
-                            <a href="turmas.php?pos=<?php echo $ln["ID"];?>" class="btn btn-danger">Deletar</a>
-                            <a href="atualizarturmas.php?pos=<?php echo $ln["ID"];?>&&ano=<?php echo $ln["Ano"];?>&&sem=<?php echo $ln["Semestre"];?>&&disc=<?php echo $ln["Disciplina"];?>&&prof=<?php echo $ln["Professor"];?>" class="btn btn-light">Editar</a>
+                            <a href="detalharturmas.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="addturmas.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
+                            <a href="atualizarturmas.php?pos=<?php echo $ln["ID"];?>&&ano=<?php echo $ln["Ano"];?>&&sem=<?php echo $ln["Semestre"];?>&&disc=<?php echo $ln["Disciplina"];?>&&prof=<?php echo $ln["Professor"];?>" class="btn">Editar</a>
+                            <a href="turmas.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>
                     </tr>
                 <?php endforeach ?>

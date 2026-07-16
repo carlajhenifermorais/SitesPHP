@@ -32,7 +32,7 @@ if (sizeof($_GET) > 0){
             </p>
         <?php endif;?>
         <nav class="navbar navbar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -41,11 +41,11 @@ if (sizeof($_GET) > 0){
             <table class="table">
                 <tr>
                     <td><h1>Frequência</h1></td>
-                    <td><a href="deletar.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="index.php" class="btn">Voltar</a></td>
                 </tr>
             </table>
             
-            <table class="table table-dark table-striped">
+            <table class="table">
                 <tr>
                     <th>ID</th>
                     <th>Matrícula</th>
@@ -60,8 +60,10 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["DataAula"];?></td>
                         <td><?php if($ln["Presenca"]==false){echo "Faltou";}else{echo "Presente";}?></td>
                         <td>
-                            <a href="frequencia.php?pos=<?php echo $ln["ID"];?>" class="btn btn-danger">Deletar</a>
-                            <a href="atualizarfrequencia.php?pos=<?php echo $ln["ID"];?>&&matri=<?php echo $ln["Matricula"];?>&&dataaula=<?php echo $ln["DataAula"];?>&&pres=<?php echo $ln["Presenca"];?>" class="btn btn-light">Editar</a>
+                            <a href="detalharfrequencia.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="addfrequencia.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
+                            <a href="atualizarfrequencia.php?pos=<?php echo $ln["ID"];?>&&matri=<?php echo $ln["Matricula"];?>&&dataaula=<?php echo $ln["DataAula"];?>&&pres=<?php echo $ln["Presenca"];?>" class="btn">Editar</a>
+                            <a href="frequencia.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>
                     </tr>
                 <?php endforeach ?>
