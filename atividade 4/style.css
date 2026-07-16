@@ -7,11 +7,12 @@ nav{
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.table{
-    background-color: rgb(255, 162, 181);
-    color: rgb(255, 162, 181);
-}
+
 .btn{
     background-color: rgb(238, 131, 153);
     color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+    color: rgb(241, 86, 117)
 }
