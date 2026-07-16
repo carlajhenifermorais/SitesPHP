@@ -36,6 +36,7 @@ if (sizeof($_GET) > 0){
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.rtl.min.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <?php if (isset($erro)) :?>
@@ -43,7 +44,7 @@ if (sizeof($_GET) > 0){
                 <?php echo $erro;?>
             </p>
         <?php endif;?>
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar">
             <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>

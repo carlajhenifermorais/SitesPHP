@@ -1,13 +1,17 @@
 body{
-    background-color: rgb(255, 162, 181);
+    background-color: rgb(255, 199, 210);
 }
-navbar{
-    background-color: rgb(226, 64, 96);
+nav{
+    background-color: rgb(247, 151, 170);
+    color: rgb(250, 237, 237);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-table{
+.table{
     background-color: rgb(255, 162, 181);
     color: rgb(255, 162, 181);
 }
 .btn{
-    background-color: crimson;
+    background-color: rgb(238, 131, 153);
+    color: rgb(255, 255, 255);
 }

@@ -28,6 +28,7 @@ if (sizeof($_GET) > 0){
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.rtl.min.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <?php if (isset($erro)) :?>
@@ -35,7 +36,7 @@ if (sizeof($_GET) > 0){
                 <?php echo $erro;?>
             </p>
         <?php endif;?>
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar">
             <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
@@ -61,8 +62,9 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["ID"];?></td>
                         <td><?php echo $ln["Departamentos"];?></td>
                         <td>
-                            <a href="departamentos.php?pos=<?php echo $ln["ID"];?>" class="btn btn-danger">Deletar</a>
-                            <a href="atualizardep.php?pos=<?php echo $ln["ID"];?>&&derp=<?php echo $ln["Departamentos"];?>" class="btn btn-light">Editar</a>
+                            <a href="detalhardepartamento.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="atualizardep.php?pos=<?php echo $ln["ID"];?>&&derp=<?php echo $ln["Departamentos"];?>" class="btn">Editar</a>
+                            <a href="departamentos.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>
                     </tr>
                     <?php $idx++ ?>
