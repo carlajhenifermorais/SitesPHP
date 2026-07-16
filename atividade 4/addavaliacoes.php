@@ -9,7 +9,7 @@ $sql = new mysqli(
 );
 
 $rs = $sql->query("SELECT a.id as ID, t.id as Turma, a.descricao as Descricao, a.peso as Peso FROM avaliacoes a JOIN turmas t ON a.turma_id = t.id");
-
+$turmas = $sql->query("SELECT id FROM turmas");
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $turma = $_POST["turma"];
     $descricao = $_POST["descricao"];
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -60,7 +60,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <form action="addavaliacoes.php" method="POST">
                     <tr>
                         <td>Automático</td>
-                        <td><input type="number" name="turma" style="width:100%"></td>
+                        <td>
+                            <select name="turma" style="width:100%">
+                                <?php foreach ($turmas as $turma): ?>
+                                    <option value="<?php echo $turma['id']; ?>">
+                                        <?php echo $turma['id']; ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </td>
                         <td><input type="text" name="descricao" style="width:100%"></td>
                         <td><input type="number" name="peso" step="0.01" style="width:100%"></td>
                     </tr>

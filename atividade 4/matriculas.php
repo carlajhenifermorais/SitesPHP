@@ -8,7 +8,15 @@ $sql = new mysqli(
     3306
 );
 
-$rs = $sql->query("SELECT m.id as ID, m.aluno_id as Aluno, a.turma_id as Turma, m.data_matricula as DataMat, m.status as Status FROM matriculas m JOIN matriculas a ON m.aluno_id = a.id JOIN turmas t ON m.turma_id = t.id");
+$rs = $sql->query("SELECT
+    m.id AS ID,
+    m.aluno_id AS Aluno,
+    m.turma_id AS Turma,
+    m.data_matricula AS DataMat,
+    m.status AS Status
+FROM matriculas m
+JOIN alunos a ON m.aluno_id = a.id
+JOIN turmas t ON m.turma_id = t.id");
 
 if (sizeof($_GET) > 0){
     $pos = $_GET["pos"];
@@ -19,7 +27,7 @@ if (sizeof($_GET) > 0){
         $erro = "Não é possível deletar. Existem notas ou frequencias dessa matricula.";
     } else {
         $sql->query("DELETE FROM matriculas WHERE id = $pos");
-        header("Location: matricula.php");
+        header("Location: matriculas.php");
         exit();
     }
 }
@@ -36,7 +44,7 @@ if (sizeof($_GET) > 0){
             </p>
         <?php endif;?>
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>

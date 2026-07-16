@@ -36,7 +36,7 @@ if (sizeof($_GET) > 0){
             </p>
         <?php endif;?>
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -62,7 +62,7 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["Departamentos"];?></td>
                         <td>
                             <a href="departamentos.php?pos=<?php echo $ln["ID"];?>" class="btn btn-danger">Deletar</a>
-                            <a href="atualizardepartamentos.php?pos=<?php echo $ln["ID"];?>&&derp=<?php echo $ln["Departamentos"];?>" class="btn btn-light">Editar</a>
+                            <a href="atualizardep.php?pos=<?php echo $ln["ID"];?>&&derp=<?php echo $ln["Departamentos"];?>" class="btn btn-light">Editar</a>
                         </td>
                     </tr>
                     <?php $idx++ ?>

@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <table class="table">
                 <tr>
                     <td><h1>Alunos</h1></td>
-                    <td><a href="../add.php" class="btn btn-dark">Voltar</a></td>
+                    <td><a href="add.php" class="btn btn-dark">Voltar</a></td>
                 </tr>
             </table>
             

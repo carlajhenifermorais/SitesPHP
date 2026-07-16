@@ -9,7 +9,8 @@ $sql = new mysqli(
 );
 
 $rs = $sql->query("SELECT m.id as ID, a.nome as Aluno, t.id as Turma, m.data_matricula as DataMat, m.status as Status FROM matriculas m JOIN alunos a ON m.aluno_id = a.id JOIN turmas t ON m.turma_id = t.id");
-
+$alunos = $sql->query("SELECT id, nome FROM alunos");
+$turmas = $sql->query("SELECT id FROM turmas");
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $aluno = $_POST["aluno"];
     $turma = $_POST["turma"];
@@ -30,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -63,10 +64,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <form action="addmatriculas.php" method="POST">
                     <tr>
                         <td><?php echo $ln["ID"]+1 ?></td>
-                        <td><input type="text" name="aluno" style="width:100%"></td>
-                        <td><input type="number" name="turma" style="width:100%"></td>
+                        <td>
+                            <select name="aluno" style="width:100%">
+                                <?php foreach ($alunos as $aluno): ?>
+                                    <option value="<?php echo $aluno['id']; ?>">
+                                        <?php echo $aluno['nome']; ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </td>
+                        <td>
+                        <select name="turma" style="width:100%">
+                                <?php foreach ($turmas as $turma): ?>
+                                    <option value="<?php echo $turma['id']; ?>">
+                                        <?php echo $turma['id']; ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </td>
                         <td><input type="date" name="dataMat" style="width:100%"></td>
-                        <td><input type="text" name="status" style="width:100%"></td>
+                        <td>
+                        <select name="status">
+                            <option value="Ativo">Ativo</option>
+                            <option value="Trancado">Trancado</option>
+                            <option value="Concluido">Concluído</option>
+                        </select>
+                        </td>
                     </tr>
                     </table>
                     <button type="submit" class="btn btn-dark">Adicionar</button>

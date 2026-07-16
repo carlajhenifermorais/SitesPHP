@@ -9,6 +9,15 @@ $sql = new mysqli(
 );
 $idx = 1;
 
+$novo_presenca = $_POST["pres"];
+
+$sql->query("UPDATE frequencia
+SET
+    matricula_id = '$novo_matricula',
+    data_aula = '$novo_dataAula',
+    presenca = '$novo_presenca'
+WHERE id = '$id'");
+
 if (sizeof($_GET) > 0){
     $pos = $_GET["pos"];
     $matricula = $_GET["matri"];
@@ -51,7 +60,14 @@ if (sizeof($_GET) > 0){
                         <input type="date" name="dataaula" value="<?php echo $dataAula?>" style="width:100%">
                         <hr>
                         <p class="card-text">Presença</p>
-                        <input type="checkbox" name="pres" value="<?php echo $presenca?>">
+                        <select name="pres" style="width:100%">
+                           <option value="1" <?php if($presenca == 1) echo "selected"; ?>>
+                                Presente
+                            </option>
+                            <option value="0" <?php if($presenca == 0) echo "selected"; ?>>
+                                Ausente
+                            </option>
+                        </select>
                         <hr>
                         <button type="submit" class="btn btn-dark">Salvar</button>
                         <td><a href="frequencia.php" class="btn btn-danger">Cancelar</a></td>

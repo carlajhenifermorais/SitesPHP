@@ -35,7 +35,7 @@ if (sizeof($_GET) > 0){
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
@@ -57,10 +57,10 @@ if (sizeof($_GET) > 0){
                         <hr>
                         <p class="card-text">Status
                         </p>
-                        <select name="status" id="status style="width:100%">
-                            <option value="Ativo">Ativo</option>
-                            <option value="Trancado">Trancado</option>
-                            <option value="Concluido">Concluído</option>
+                        <select name="status" style="width:100%">
+                            <option value="Ativo" <?php if($status=="Ativo") echo "selected"; ?>>Ativo</option>
+                            <option value="Trancado" <?php if($status=="Trancado") echo "selected"; ?>>Trancado</option>
+                            <option value="Concluido" <?php if($status=="Concluido") echo "selected"; ?>>Concluído</option>
                         </select>
                         <hr>
                         <button type="submit" class="btn btn-dark">Salvar</button>
