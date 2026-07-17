@@ -8,7 +8,8 @@ $sql = new mysqli(
     3306
 );
 $idx = 1;
-$rs = $sql->query("SELECT d.id as ID, d.nome as Departamentos FROM departamentos d");
+$rs = $sql->query("SELECT d.id as ID, d.nome as Departamentos 
+FROM departamentos d");
 
 if (sizeof($_GET) > 0){
     $pos = $_GET["pos"];
@@ -62,7 +63,7 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["ID"];?></td>
                         <td><?php echo $ln["Departamentos"];?></td>
                         <td>
-                            <a href="detalhardepartamento.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="detalhardepartamento.php?id=<?php echo $ln['ID']; ?>" class="btn">Detalhar</a>
                             <a href="atualizardep.php?pos=<?php echo $ln["ID"];?>&&derp=<?php echo $ln["Departamentos"];?>" class="btn">Editar</a>
                             <a href="departamentos.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>

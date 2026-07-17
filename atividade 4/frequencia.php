@@ -60,7 +60,6 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["DataAula"];?></td>
                         <td><?php if($ln["Presenca"]==false){echo "Faltou";}else{echo "Presente";}?></td>
                         <td>
-                            <a href="detalharfrequencia.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
                             <a href="atualizarfrequencia.php?pos=<?php echo $ln["ID"];?>&&matri=<?php echo $ln["Matricula"];?>&&dataaula=<?php echo $ln["DataAula"];?>&&pres=<?php echo $ln["Presenca"];?>" class="btn">Editar</a>
                             <a href="frequencia.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>

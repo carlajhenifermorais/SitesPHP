@@ -35,8 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="container">
             <h1>Departamentos</h1>
             
-            
-            
             <table class="table">
                 <tr>
                     <th>ID</th>
@@ -56,11 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </table>
                     <button type="submit" class="btn btn-dark">Adicionar</button>
                 </form>
-            <table class="table">
-                <tr>
-                    <td><a href="departamentos.php" class="btn">Voltar</a></td>
-                </tr>
-            </table>
+            <a href="departamentos.php" class="btn">Voltar</a>
         </div>
     </body>
 </html>

@@ -40,12 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </nav>
 
         <div class="container">
-            <table class="table">
-                <tr>
-                    <td><h1>Turmas</h1></td>
-                    <td><a href="turmas.php" class="btn">Voltar</a></td>
-                </tr>
-            </table>
+            <h1>Turmas</h1>
             
             <table class="table">
                 <tr>
@@ -87,6 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </table>
                     <button type="submit" class="btn">Adicionar</button>
                 </form>
+                <a href="turmas.php" class="btn">Voltar</a>
         </div>
     </body>
 </html>

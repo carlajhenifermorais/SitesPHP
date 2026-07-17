@@ -64,7 +64,7 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["Curso"];?></td>
                         <td><?php echo $ln["Duracao"];?> Semestres</td>
                         <td>
-                            <a href="detalharcursos.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="detalharcursos.php?id=<?php echo $ln['ID'];?>" class="btn">Detalhar</a>
                             <a href="atualizarcursos.php?pos=<?php echo $ln["ID"];?>&&curso=<?php echo $ln["Curso"];?>&&dura=<?php echo $ln["Duracao"];?>" class="btn">Editar</a>
                             <a href="cursos.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>

@@ -75,7 +75,7 @@ if (sizeof($_GET) > 0){
                         <td><?php echo $ln["DataMat"];?></td>
                         <td><?php echo $ln["Status"];?></td>
                         <td>
-                            <a href="detalharmatriculas.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
+                            <a href="detalharmatriculas.php?id=<?php echo $ln['ID'];?>" class="btn">Detalhar</a>
                             <a href="atualizarmatriculas.php?pos=<?php echo $ln["ID"];?>&&aluno=<?php echo $ln["Aluno"];?>&&turma=<?php echo $ln["Turma"];?>&&datamat=<?php echo $ln["DataMat"];?>&&status=<?php echo $ln["Status"];?>" class="btn">Editar</a>
                             <a href="matriculas.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
                         </td>

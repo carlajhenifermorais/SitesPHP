@@ -71,11 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </table>
                     <button type="submit" class="btn">Adicionar</button>
                 </form>
-                <table class="table">
-                <tr>
-                    <td><a href="disciplinas.php" class="btn">Voltar</a></td>
-                </tr>
-            </table>
+                <a href="disciplinas.php" class="btn">Voltar</a>
         </div>
     </body>
 </html>

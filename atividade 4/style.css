@@ -4,7 +4,6 @@ body{
 nav{
     background-color: rgb(247, 151, 170);
     color: rgb(250, 237, 237);
-    font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -14,5 +13,15 @@ nav{
 }
 
 .btn:hover {
-    color: rgb(241, 86, 117)
+    background-color: rgb(255, 226, 232);
+}
+.card-body, .card{
+    background-color: rgb(255, 247, 236);
+}
+.card-header{
+    background-color: rgb(247, 151, 170);
+    color: rgb(255, 255, 255);
+}
+h1, h5{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

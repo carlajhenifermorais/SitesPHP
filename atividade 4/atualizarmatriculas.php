@@ -42,8 +42,9 @@ if (sizeof($_GET) > 0){
         </nav>
 
         <div class="container">
+            <br>
             <div class="card">
-                <h5 class="card-header bg-dark text-light">Matriculas</h5>
+                <h5 class="card-header">Matriculas</h5>
                 <div class="card-body">
                     <form action="atualizarmatriculas.php" method="POST"> 
                         <input type="hidden" value="<?php echo $pos?>" name="id">

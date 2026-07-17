@@ -34,14 +34,15 @@ if (sizeof($_GET) > 0){
     </head>
     <body>
         <nav class="navbar navbar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
 
         <div class="container">
+            <br>
             <div class="card">
-                <h5 class="card-header bg-dark text-light">Disciplinas</h5>
+                <h5 class="card-header">Disciplinas</h5>
                 <div class="card-body">
                     <form action="atualizardisciplinas.php" method="POST"> 
                         <input type="hidden" value="<?php echo $pos?>" name="id">

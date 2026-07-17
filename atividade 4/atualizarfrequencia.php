@@ -9,14 +9,7 @@ $sql = new mysqli(
 );
 $idx = 1;
 
-$novo_presenca = $_POST["pres"];
 
-$sql->query("UPDATE frequencia
-SET
-    matricula_id = '$novo_matricula',
-    data_aula = '$novo_dataAula',
-    presenca = '$novo_presenca'
-WHERE id = '$id'");
 
 if (sizeof($_GET) > 0){
     $pos = $_GET["pos"];
@@ -43,14 +36,15 @@ if (sizeof($_GET) > 0){
     </head>
     <body>
         <nav class="navbar navbar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 Escola Mundial
             </a>
         </nav>
 
         <div class="container">
+            <br>
             <div class="card">
-                <h5 class="card-header bg-dark text-light">Frequência</h5>
+                <h5 class="card-header">Frequência</h5>
                 <div class="card-body">
                     <form action="atualizarfrequencia.php" method="POST"> 
                         <input type="hidden" value="<?php echo $pos?>" name="id">

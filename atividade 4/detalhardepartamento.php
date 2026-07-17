@@ -8,15 +8,13 @@ $sql = new mysqli(
     3306
 );
 
-$rs = $sql->query("SELECT n.id as ID, m.id as Matricula, a.id as Avaliacao, n.valor_nota as Valor FROM notas n JOIN matriculas m ON n.matricula_id = m.id JOIN avaliacoes a ON n.avaliacao_id = a.id");
+$id = $_GET["id"];
 
-if (sizeof($_GET) > 0){
-    $pos = $_GET["pos"];
-
-    $sql->query("DELETE FROM notas WHERE id = $pos");
-    header("Location: notas.php");
-    exit();
-}
+$rs = $sql->query(
+"SELECT p.id As ID, p.nome As Nome, p.cpf AS CPF
+FROM professores p
+WHERE departamento_id = $id"
+);
 
 ?>
 
@@ -33,37 +31,24 @@ if (sizeof($_GET) > 0){
         </nav>
 
         <div class="container">
-            <h1>Notas</h1>
+            <h1>Professores do departamento</h1>
             
             
             <table class="table">
                 <tr>
                     <th>ID</th>
-                    <th>Matrícula</th>
-                    <th>Avaliação</th>
-                    <th>Nota</th>
-                    <th>Ações</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
                 </tr>
                 <?php foreach($rs as $ln): ?>
                     <tr>
                         <td><?php echo $ln["ID"];?></td>
-                        <td><?php echo $ln["Matricula"];?></td>
-                        <td><?php echo $ln["Avaliacao"];?></td>
-                        <td><?php echo $ln["Valor"];?></td>
-                        <td>
-                            <a href="detalharnotas.php?pos=<?php echo $ln["ID"];?>" class="btn">Detalhar</a>
-                            <a href="addnotas.php?pos=<?php echo $ln["ID"];?>" class="btn">Adicionar</a>
-                            <a href="atualizarnotas.php?pos=<?php echo $ln["ID"];?>&&matri=<?php echo $ln["Matricula"];?>&&ava=<?php echo $ln["Avaliacao"];?>&&valor=<?php echo $ln["Valor"];?>" class="btn">Editar</a>
-                            <a href="notas.php?pos=<?php echo $ln["ID"];?>" class="btn">Deletar</a>
-                        </td>
+                        <td><?php echo $ln["Nome"];?></td>
+                        <td><?php echo $ln["CPF"];?></td>
                     </tr>
                 <?php endforeach ?>
             </table>
-            <table class="table">
-                <tr>
-                    <td><a href="index.php" class="btn">Voltar</a></td>
-                </tr>
-            </table>
+            <a href="departamentos.php" class="btn">Voltar</a>
         </div>
     </body>
 </html>
